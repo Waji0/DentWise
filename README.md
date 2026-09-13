@@ -36,8 +36,9 @@
 8. [Authentication and Subscription Management](#8-authentication-and-subscription-management)
 9. [Admin Functionality](#9-admin-functionality)
 10. [Email Notification System](#10-email-notification-system)
-11. [Technology Stack Summary](#11-technology-stack-summary)
-12. [Conclusion](#12-conclusion)
+11. [UI Screenshots](#11-UI-screenshots) 
+12. [Technology Stack Summary](#12-technology-stack-summary)
+13. [Conclusion](#13-conclusion)
 
 ---
 
@@ -293,7 +294,99 @@ Based on the system architecture, Resend is responsible for the following catego
 
 In both the standard and voice-assisted booking sequences, the email step occurs after the appointment has already been created in PostgreSQL, so that the confirmation reflects a successfully stored booking rather than a pending or unvalidated request.
 
-## 11. Technology Stack Summary
+## 11. UI Screenshots
+
+This section presents the main user-interface screens of the Dentwise platform.
+
+![fig6](images/fig6.png)
+
+*fig6*
+
+![fig7](images/fig7.png)
+
+*fig7*
+
+![fig8](images/fig8.png)
+
+*fig8*
+
+![fig9](images/fig9.png)
+
+*fig9*
+
+![fig10](images/fig10.png)
+
+*fig10*
+
+![fig11](images/fig11.png)
+
+*fig11*
+
+![fig12](images/fig12.png)
+
+*fig12*
+
+![fig13](images/fig13.png)
+
+*fig13*
+
+![fig14](images/fig14.png)
+
+*fig14*
+
+![fig15](images/fig15.png)
+
+*fig15*
+
+![fig16](images/fig16.png)
+
+*fig16*
+
+![fig17](images/fig17.png)
+
+*fig17*
+
+![fig18](images/fig18.png)
+
+*fig18*
+
+![fig19](images/fig19.png)
+
+*fig19*
+
+![fig20](images/fig20.png)
+
+*fig20*
+
+![fig21](images/fig21.png)
+
+*fig21*
+
+![fig22](images/fig22.png)
+
+*fig22*
+
+![fig23](images/fig23.png)
+
+*fig23*
+
+![fig24](images/fig24.png)
+
+*fig24*
+
+![fig25](images/fig25.png)
+
+*fig25*
+
+![fig26](images/fig26.png)
+
+*fig26*
+
+![fig27](images/fig27.png)
+
+*fig27*
+
+## 12. Technology Stack Summary
 
 | Layer / Category | Technology / Service | Role |
 |---|---|---|
@@ -307,10 +400,16 @@ In both the standard and voice-assisted booking sequences, the email step occurs
 | Deployment / Hosting | Sevalla | Git-based deployment, auto-scaling, production hosting |
 | Supporting Libraries | TanStack Query, React Hook Form, Zod, Recharts | Data fetching, form handling, validation, statistics charts |
 
-## 12. Conclusion
+## 13. Conclusion
 
-This documentation has presented the Dentwise dental platform as it is actually implemented: a Next.js application combining a patient-facing interface and an administrative dashboard, backed by a PostgreSQL database accessed through Prisma, and integrated with three external services — Clerk for authentication and subscription management, Vapi for AI voice-based appointment booking, and Resend for email notifications — and deployed on Sevalla.
+This documentation has presented the Dentwise dental platform as it is implemented: a Next.js application combining a patient-facing interface and an administrative dashboard, backed by a PostgreSQL database accessed through Prisma, and integrated with Clerk for authentication and subscription management, Vapi for AI voice-based appointment booking, and Resend for email notifications, with the application deployed on Sevalla.
 
-The database design centers on three entities — User, Doctor, and Appointment — related through two one-to-many relationships, with identifiers generated as CUIDs and two supporting enumerations, Gender and AppointmentStatus. The appointment booking workflow, in both its standard and voice-assisted forms, follows a consistent path from doctor and slot selection through availability checking, appointment creation, and confirmation via email and, where applicable, voice. Administrative functionality allows the practice to manage its doctors and appointments and to monitor overall activity through basic statistics.
+The database design centers on three entities — User, Doctor, and Appointment — related through two one-to-many relationships, with identifiers generated as CUIDs and two supporting enumerations, Gender and AppointmentStatus.
 
-Together with the five accompanying diagrams — the System Architecture Diagram, the Use Case Diagram, the Entity Relationship Diagram, and the two Major System Workflow sequence diagrams — this document provides an accurate and complete technical description of the Dentwise platform as submitted for the Internet Application Development course.
+The appointment booking workflow, in both its standard and voice-assisted forms, follows a consistent path from doctor and slot selection through availability checking, appointment creation, and confirmation via email and, where applicable, voice.
+
+Administrative functionality allows the practice to manage doctors and appointments and to monitor overall activity through basic statistics.
+
+The UI screenshots from `fig6` through `fig27` provide a visual representation of the application's implemented patient-facing and administrative interfaces.
+
+Together with the five accompanying diagrams — the System Architecture Diagram, the Use Case Diagram, the Entity Relationship Diagram, and the two Major System Workflow sequence diagrams — this document provides a complete technical description of the Dentwise platform as submitted for the Internet Application Development course.
